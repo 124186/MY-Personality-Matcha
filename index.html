@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matcha Personality Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="stripe-wash"></div>
+
+<audio id="bg-audio" loop preload="none"></audio>
+<button class="music-btn" id="music-btn" aria-label="Mute atau nyalakan musik">🔊</button>
+
+<div id="app">
+  <div class="track" id="track">
+
+    <!-- ===== SLIDE 0: LANDING ===== -->
+    <section class="slide" id="slide-landing">
+      <div class="dot-band"></div>
+      <div class="sticker" id="deco-clover-1" style="width:64px; top:14%; left:6%; transform:rotate(-12deg);"><img src="" alt=""></div>
+      <div class="sticker" id="deco-berry-1" style="width:56px; top:16%; right:7%; transform:rotate(10deg);"><img src="" alt=""></div>
+      <div class="landing-content">
+        <span class="kicker">Kuis Rasa &amp; Personality</span>
+        <h1 class="landing-title">Matcha Mana yang Jodoh Sama Kamu?</h1>
+        <p class="landing-sub">Jawab 5 pertanyaan singkat, temukan menu matcha yang paling cocok sama gaya kamu.</p>
+        <div class="hero-cup"><img src="" alt="Matcha latte" id="hero-cup-img"></div>
+        <button class="btn" id="start-btn">Mulai Kuis</button>
+        <span class="start-hint">5 pertanyaan · sekitar 1 menit</span>
+      </div>
+      <div class="sticker" id="deco-clover-2" style="width:70px; bottom:6%; right:4%; transform:rotate(8deg);"><img src="" alt=""></div>
+    </section>
+
+    <!-- ===== QUESTION SLIDES (template, injected via JS) ===== -->
+
+    <!-- ===== RESULT SLIDE ===== -->
+    <section class="slide" id="slide-result">
+      <div class="dot-band bottom"></div>
+      <div class="sticker" id="deco-berry-2" style="width:52px; top:10%; left:6%; transform:rotate(-10deg);"><img src="" alt=""></div>
+      <div class="sticker" id="deco-clover-3" style="width:60px; top:8%; right:6%; transform:rotate(14deg);"><img src="" alt=""></div>
+      <div class="result-wrap">
+        <span class="result-kicker">Hasil Kuis Kamu</span>
+        <h2 class="result-name" id="result-name">-</h2>
+        <div class="result-cup"><img src="" alt="" id="result-cup-img"></div>
+        <span class="result-trait" id="result-trait">-</span>
+        <p class="result-desc" id="result-desc">-</p>
+
+        <span class="other-label">Cicipin juga varian lainnya</span>
+        <div class="other-row" id="other-row"></div>
+
+        <div class="result-actions">
+          <button class="btn" id="restart-btn">Ulangi Kuis</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
